@@ -1,0 +1,39 @@
+table {
+  margin-top: 40px;
+  width: 100%;
+  color: #ccc;
+  border-collapse: collapse;
+  border: 1px solid rgba($color: #8524b1, $alpha: 0.5);
+  thead {
+    width: 100%;
+    background: #8524b1;
+    color: #fff;
+    th {
+      padding: 8px;
+      text-transform: capitalize;
+      font-size: 0.7rem;
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        border-bottom: 1px solid rgba($color: #8524b1, $alpha: 0.5);
+        padding: 10px 5px;
+        text-align: center;
+        font-size: 0.7rem;
+      }
+
+      &:last-of-type {
+        border: none;
+        td {
+          border: none;
+        }
+      }
+
+      &:hover {
+        background-color: rgba($color: #8524b1, $alpha: 0.5);
+      }
+    }
+  }
+}
