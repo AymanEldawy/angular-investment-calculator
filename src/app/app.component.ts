@@ -127,13 +127,11 @@ export class AppComponent {
         investmentValue - annualInvestment * year - initialInvestment;
       annualData.push({
         year: year,
-        interest: parseFloat(interestEarnedInYear.toFixed(2)),
-        valueEndOfYear: parseFloat(investmentValue.toFixed(2)),
+        interest: interestEarnedInYear,
+        valueEndOfYear: investmentValue,
         annualInvestment: annualInvestment,
-        totalInterest: parseFloat(totalInterest.toFixed(2)),
-        totalAmountInvested: parseFloat(
-          (initialInvestment + annualInvestment * year).toFixed(2)
-        ),
+        totalInterest: totalInterest,
+        totalAmountInvested: initialInvestment + annualInvestment * year,
       });
     }
 

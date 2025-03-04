@@ -4,21 +4,23 @@
       <th>year</th>
       <th>interest</th>
       <th>value End Of Year</th>
-      <th>annual Investment</th>
+      <!-- <th>annual Investment</th> -->
       <th>total Interest</th>
       <th>total Amount Invested</th>
     </tr>
   </thead>
   <tbody>
     @for (item of list; track item.year) {
-      <tr>
-        <td>{{item.year}}</td>
-        <td>{{item.interest}}</td>
-        <td>{{item.valueEndOfYear}}</td>
-        <td>{{item.annualInvestment}}</td>
-        <td>{{item.totalInterest}}</td>
-        <td>{{item.totalAmountInvested}}</td>
-      </tr>
+    <tr>
+      <td>{{ item.year }}</td>
+      <td>{{ item.interest | currency }}</td>
+      <td>{{ item.valueEndOfYear | currency }}</td>
+      <!-- <td>{{item.annualInvestment}}</td> -->
+      <td>{{ item.totalInterest | currency }}</td>
+      <td>{{ item.totalAmountInvested | currency }}</td>
+      <td></td>
+    </tr>
+
     }
   </tbody>
 </table>
